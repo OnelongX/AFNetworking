@@ -94,8 +94,8 @@ NS_ASSUME_NONNULL_BEGIN
  The managed session.
  */
 @property (readonly, nonatomic, strong) NSURLSession *session;
-
-@property (nonatomic, strong) NSMutableDictionary *ip2host;
+@property (nonatomic, copy) NSString* (^fixHttpDnsHost)(NSString*);
+//@property (nonatomic, strong) NSMutableDictionary *ip2host;
 
 /**
  The operation queue on which delegate callbacks are run.
